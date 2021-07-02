@@ -22,6 +22,7 @@ body {
   font-weight: normal;
   color: var(--primari-text-color);
   background-color: var(--primari-white-color);
+  margin: 0;
 }
 
 .link {
@@ -52,12 +53,12 @@ body {
   align-items: center;
 }
 
-.current {
+.header-nav__link--current {
   position: relative;
   color: var(--accent-color);
 }
 
-.current::after {
+.header-nav__link--current::after {
   position: absolute;
   content: " ";
   left: 0;
@@ -96,29 +97,29 @@ body {
   margin-left: 49px;
 }
 
-.header-list .header-list__item + .header-list__item {
+.contacts__list .contacts__list__item + .contacts__list__item {
   margin-left: 50px;
 }
 
-.header-list {
+.contacts__list {
   display: flex;
   margin-left: auto;
 }
 
-.header-list__icon {
+.contacts__list__icon {
   margin-right: 10px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-list__item {
+.contacts__list__item {
   display: flex;
 }
 
-.header-list__item:hover, .header-list__item:focus {
+.contacts__list__item:hover, .contacts__list__item:focus {
   fill: var(--accent-color);
 }
 
-.header-list__link {
+.contacts__list__link {
   display: flex;
   color: var(--primari-text-color);
   text-decoration: none;
@@ -128,7 +129,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-list__link:hover, .header-list__link:focus {
+.contacts__list__link:hover, .contacts__list__link:focus {
   color: var(--accent-color);
 }
 
@@ -201,11 +202,6 @@ body {
   background-color: var(--bg-hero-button-color);
 }
 
-.button__hero-padding {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
 .button__footer-padding {
   height: 50px;
   display: flex;
@@ -234,17 +230,21 @@ body {
   text-align: center;
 }
 
-.features-list {
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features__list {
   display: flex;
 }
 
-.features-list__item:not(:last-child) {
+.features__list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.features-list__wrapper {
+.features__list__thamb {
   display: flex;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -253,7 +253,7 @@ body {
   background-color: var(--bg-command-color);
 }
 
-.features-list__subtitle {
+.features__list__subtitle {
   margin: 0;
   margin-bottom: 10px;
   font-weight: bold;
@@ -263,7 +263,7 @@ body {
   text-transform: uppercase;
 }
 
-.features-list__text {
+.features__list__text {
   margin: 0;
   font-size: 14px;
   line-height: 1.714;
@@ -271,20 +271,21 @@ body {
   color: var(--title-text-color);
 }
 
-.work__wrapper {
+.work {
   padding-top: 0px;
+  padding-bottom: 94px;
 }
 
-.work-list {
+.work__list {
   display: flex;
   justify-content: space-between;
 }
 
-.work-list__thamb {
+.work__list__item {
   position: relative;
 }
 
-.work-list__subtitle {
+.work__list__subtitle {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -298,26 +299,28 @@ body {
 }
 
 .command {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--bg-command-color);
   text-align: center;
 }
 
-.command-list {
+.command__list {
   display: flex;
   justify-content: space-between;
 }
 
-.command-list__card {
+.command__list__card {
   width: 270px;
   background-color: var(--primari-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.command-list__card:not(:last-child) {
+.command__list__card:not(:last-child) {
   margin-right: 30px;
 }
 
-.command-list__wrapper {
+.command__list__box {
   padding-top: 30px;
   padding-bottom: 30px;
   border: 1px solid var(--command-card-color);
@@ -326,7 +329,7 @@ body {
   box-sizing: border-box;
 }
 
-.command-list__heading {
+.command__list__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.172;
@@ -334,14 +337,14 @@ body {
   margin: 0px;
 }
 
-.command-list__desc {
+.command__list__description {
   font-size: 16px;
   line-height: 1.172;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
 
-.social-list {
+.social__list {
   margin: 0 auto;
   margin-top: 16px;
   display: flex;
@@ -349,17 +352,17 @@ body {
   padding: 0;
 }
 
-.social-list__item {
+.social__list__item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.social-list__item:not(:last-child) {
+.social__list__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.social-list__icon {
+.social__list__icon {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -368,19 +371,34 @@ body {
   align-items: center;
 }
 
-.social-list__icon_color-light {
+.social__list__icon_color-light {
   fill: var(--icons-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list__icon_color-light:hover, .social-list__icon_color-light:focus {
+.social__list__icon_color-light:hover, .social__list__icon_color-light:focus {
   background-color: var(--accent-color);
   fill: var(--primari-white-color);
 }
 
-.social-list__svg {
+.social__list__svg {
   width: 20px;
   height: 20px;
+}
+
+.social__list__icon_color-dark {
+  fill: var(--primari-white-color);
+  background-color: var(--footer-bg-icon);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social__list__icon_color-dark:hover, .social__list__icon_color-dark:focus {
+  background-color: var(--accent-color);
+}
+
+.client {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .client__list {
@@ -467,16 +485,6 @@ body {
   margin-right: 93px;
 }
 
-.social-list__icon_color-dark {
-  fill: var(--primari-white-color);
-  background-color: var(--footer-bg-icon);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-list__icon_color-dark:hover, .social-list__icon_color-dark:focus {
-  background-color: var(--accent-color);
-}
-
 .footer-send {
   display: flex;
 }
@@ -497,7 +505,7 @@ body {
   margin-left: 10px;
 }
 
-.buttons-list {
+.buttons__list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -526,7 +534,7 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.buttons-list__item:not(:last-child) {
+.buttons__list__item:not(:last-child) {
   margin-right: 8px;
 }
 

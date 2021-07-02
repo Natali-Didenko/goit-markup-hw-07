@@ -1,16 +1,17 @@
-.work__wrapper {
+.work {
   padding-top: 0px;
+  padding-bottom: 94px;
 }
 
-.work-list {
+.work__list {
   display: flex;
   justify-content: space-between;
 }
-.work-list__thamb {
+.work__list__item {
   position: relative;
 }
 
-.work-list__subtitle {
+.work__list__subtitle {
   position: absolute;
   bottom: 0;
   left: 0;

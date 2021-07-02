@@ -47,15 +47,6 @@
   margin-right: 93px;
 }
 
-.social-list__icon_color-dark {
-  fill: var(--primari-white-color);
-  background-color: var(--footer-bg-icon);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    background-color: var(--accent-color);
-  }
-}
 .footer-send {
   display: flex;
 }

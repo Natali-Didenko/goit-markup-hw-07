@@ -1,4 +1,4 @@
-.buttons-list {
+.buttons__list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -28,6 +28,6 @@
   }
 }
 
-.buttons-list__item:not(:last-child) {
+.buttons__list__item:not(:last-child) {
   margin-right: 8px;
 }
